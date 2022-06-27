@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuangDocument</title>  
+    <link rel="stylesheet" href="./base.css">
+    
+</head>    
+    
+
+<body>
+    <div class="display-block">
+
+        <button class="signin js-signin" onclick="showSignin()">Đăng nhập</button>
+    </div>
+    <div>
+        <div class="modal_login modal" onclick="hidenSignin()">
+            <!--lop phu phuong thuc-->
+            <div class="modal__overlay"></div> 
+            <!-- Form login -->
+            <div class="modal__body modal__body-js"> 
+                <div class="login-form">
+                    <div class="auth-form">
+                        <div class="auth-form__container">
+
+                            <div class="auth-form__header">
+                                <header class="auth-form__heading">Member Login</header>
+                            </div>
+        
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" name="account" class="auth-form__input js-account" placeholder="UserName">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                </div>
+                            </div>
+        
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" name="pass" class="auth-form__input js-pass" placeholder="Password">
+                                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                                </div>
+                            </div>
+        
+                            <div class="notify">
+                                <p class="notify__err">Tài khoản hoặc mật khẩu không đúng</p>
+                            </div>
+                           
+                            <button class="btn btn--login js-log" onclick="checkAccount()">Login</button>                       
+                        </div>
+                    </div>
+                    
+                    <div class="forgot">
+                        <a href="#" class="forgot__pass" onclick="ShowForgot()">Forgot Password?</a>
+                    </div>
+                </div>                        
+            </div>
+            
+            <div class="forgot-form">                    
+                
+                <div class="auth-form__header forgot-form__header">
+                    <header class="auth-form__heading forgot-form__heading">Change Your Password</header>
+                </div>
+    
+                <div class="auth-form__form forgot-form__form">
+                    <div class="auth-form__group forgot-form__group old-pass-block">
+                        <input type="text" name="oldPass" class="auth-form__input forgot-form__input js-account" placeholder="OldPassWord">
+                    </div> 
+                </div>
+    
+                <div class="auth-form__form forgot-form__form">
+                    <div class="auth-form__group forgot-form__group new-pass-block">
+                        <input type="text" name="newPass" class="auth-form__input forgot-form__input js-pass" placeholder="NewPassword">
+                    </div>
+                </div>                 
+            
+                <button class="btn btn--login js-back" onclick="checkChangePass()">Save</button>                  
+            </div>
+        </div>
+        
+        
+        
+        
+
+    </div>
+
+    
+    <script src="./main.js"></script>
+    
+</body>
+
+</html>
